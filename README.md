@@ -8,7 +8,7 @@ A digital twin of an automated object-sorting cell, integrating 3D simulation, A
 
 An object travels along the conveyor to the inspection point, where a camera captures an image and a MobileNetV2 model classifies it in real time. The PLC receives the classification result over OPC UA and routes the object to its designated bin via the ABB robot.
 
-![Demo of the sorting cycle](assets/demo.gif)
+![Demo of the sorting cycle](assets/demo-normal-speed.gif)
 
 *(real-time, full-speed capture — object classes: apples, bottles, cars, cups, screwdrivers)*
 
@@ -98,7 +98,7 @@ Communication between the PLC and the vision system is achieved using **OPC UA**
 
 ```
 ├── assets/                  # Demo GIF used in this README
-│   └── demo.gif
+│   └── demo-normal-speed.gif
 ├── robotstudio/              # ABB RobotStudio station and RAPID program
 │   ├── station/
 │   │   ├── Project3.rsstnx
