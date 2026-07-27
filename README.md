@@ -10,7 +10,7 @@ An object travels along the conveyor to the inspection point, where a camera cap
 
 ![Demo of the sorting cycle](assets/demo.gif)
 
-*(sped up ~10x — object classes: apples, bottles, cars, cups, screwdrivers)*
+*(real-time, full-speed capture — object classes: apples, bottles, cars, cups, screwdrivers)*
 
 ---
 
