@@ -1,12 +1,12 @@
 # Digital Twin–Based Vision System for Automated Object Sorting — ABB Robot, CodeSys PLC & Deep Learning
 
-A digital twin of an automated object-sorting cell, integrating 3D simulation, ABB robot programming, PLC control logic, and a deep learning vision system into one coordinated automation pipeline. Built for the *Virtual Intelligent Machines* course at the University of Skövde.
+A digital twin of an automated object-sorting cell, integrating 3D simulation, ABB robot programming, PLC control logic, and a deep learning vision system into one coordinated automation pipeline. 
 
 ---
 
 ## Demo
 
-An object travels along the conveyor to the inspection point, where a camera captures an image and a MobileNetV2 model classifies it in real time. The PLC receives the classification result over OPC UA and routes the object to its designated bin via the ABB robot.
+An object travels along the conveyor to the inspection point, where a camera captures an image and a MobileNetV2 model classifies it in real time. The PLC receives the classification result over OPC UA and routes the object to its designated bin via the ABB robot or pneumatic cylinder depending on the drop point.
 
 ![Demo of the sorting cycle](assets/demo-normal-speed.gif)
 
@@ -23,7 +23,7 @@ This project designs and evaluates a digital twin–based sorting system that mi
 3. A camera positioned above the conveyor captures an image of the object.
 4. A Python vision system (MobileNetV2) classifies the object into one of five classes: **apples, bottles, cars, cups, screwdrivers**.
 5. The classification result is sent back to the PLC over OPC UA.
-6. The PLC determines the sorting action and activates the corresponding actuator or the ABB robot, which picks and places the object into its designated bin.
+6. The PLC determines the sorting action and activates the pneumatic cylinder or the ABB robot, which picks and places the object into its designated bin.
 7. A three-colour signal beacon reports system status throughout the cycle, and a reset routine handles fault conditions (e.g. an object removed from the conveyor mid-cycle).
 
 The project also investigates the **reality gap** between virtual and real image data — evaluating classification/detection model performance under virtual-to-virtual, real-to-real, virtual-to-real, and mixed-to-real training/testing conditions.
